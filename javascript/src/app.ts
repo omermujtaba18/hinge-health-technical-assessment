@@ -4,6 +4,7 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import config from './config';
+import bindRoutes from './routes';
 
 const app: Application = express();
 
@@ -13,8 +14,6 @@ app.use(cors({ origin: [config.appUrl] }));
 
 app.use(helmet());
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+bindRoutes(app);
 
 export default app;
