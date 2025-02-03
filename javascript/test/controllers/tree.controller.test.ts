@@ -68,5 +68,27 @@ describe('Tree Controller', () => {
         message: 'Parent node not found',
       });
     });
+
+    [
+      { payload: {}, error: 'label is a required field' },
+      {
+        payload: { parent: '100' },
+        error: 'label is a required field',
+      },
+      {
+        payload: { label: 'cat' },
+        error: 'parent is a required field',
+      },
+    ].forEach((scenario) => {
+      it('should return 400 error if invalid request body', async () => {
+        const response = await api.post('/api/tree').send(scenario.payload);
+
+        expect(response.status).toBe(400);
+        expect(response.body).toEqual({
+          code: 400,
+          message: scenario.error,
+        });
+      });
+    });
   });
 });
