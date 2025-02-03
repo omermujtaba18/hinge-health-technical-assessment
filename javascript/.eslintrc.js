@@ -3,10 +3,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: [
-    'airbnb-base',
-    'plugin:jest/recommended',
-  ],
+  extends: ['airbnb-base', 'plugin:jest/recommended'],
   plugins: ['jest'],
   globals: {
     Atomics: 'readonly',
@@ -16,6 +13,5 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  rules: {
-  },
+  rules: {},
 };
