@@ -33,3 +33,8 @@ Now follow the steps outlined in [The Problem](https://github.com/hinge-health/i
         npm run app:dev # Terminal 2
 
 5.  Your server should be running at [http://localhost:3001](http://localhost:3001)
+
+## Running Tests
+
+    npm run test
+
