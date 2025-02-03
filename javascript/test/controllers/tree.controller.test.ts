@@ -56,15 +56,15 @@ describe('Tree Controller', () => {
       expect(response.body).toEqual({ children: [], id: 3, label: 'cat' });
     });
 
-    it('should return 400 error if parent node does not exists', async () => {
+    it('should return 404 error if parent node does not exists', async () => {
       const response = await api.post('/api/tree').send({
         parent: '100',
         label: 'cat',
       });
 
-      expect(response.status).toBe(400);
+      expect(response.status).toBe(404);
       expect(response.body).toEqual({
-        code: 400,
+        code: 404,
         message: 'Parent node not found',
       });
     });

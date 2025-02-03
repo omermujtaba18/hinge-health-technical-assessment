@@ -16,6 +16,6 @@ export const addTreeNode = async (req: Request, res: Response) => {
     const node = await treeService.addTreeNode(parent, label);
     res.status(200).json(node);
   } catch (err: any) {
-    res.status(400).json({ code: 400, message: err.message });
+    res.status(404).json({ code: 404, message: err.message });
   }
 };
