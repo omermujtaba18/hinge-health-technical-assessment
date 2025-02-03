@@ -1,3 +1,5 @@
+// .eslintrc.js
+
 module.exports = {
   env: {
     es6: true,
@@ -14,4 +16,5 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {},
+  ignorePatterns: ['node_modules/', 'dist/'],
 };

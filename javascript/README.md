@@ -37,4 +37,3 @@ Now follow the steps outlined in [The Problem](https://github.com/hinge-health/i
 ## Running Tests
 
     npm run test
-

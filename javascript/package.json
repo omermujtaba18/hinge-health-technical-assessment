@@ -10,7 +10,8 @@
     "ts:watch": "tsc --pretty --watch",
     "test": "jest --config ./test/jest.config.js --runInBand",
     "lint": "eslint . --ext .js",
-    "format": "prettier --write"
+    "format": "prettier --write",
+    "format:check": "prettier --list-different"
   },
   "author": "",
   "license": "ISC",
