@@ -4,19 +4,31 @@
   "description": "Node app for HH Service Challenge",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "app:prod": "node ./dist/src/index.js",
+    "app:dev": "nodemon ./dist/src/index.js",
+    "ts:watch": "tsc --pretty --watch",
     "test": "jest",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "2.8.5",
+    "express": "^4.17.1",
+    "helmet": "8.0.0"
   },
   "devDependencies": {
+    "@types/cors": "2.8.17",
+    "@types/express": "5.0.0",
     "eslint": "^7.16.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jest": "^24.4.0",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "nodemon": "3.1.9",
+    "prettier": "3.4.2",
+    "typescript": "5.7.3"
   }
 }
